@@ -4,7 +4,7 @@ import Forms from "../components/formulario";
 
 const FormPages = () => {
   return (
-    <Box sx={{background: "#F9F3EE"}}>
+    <Box sx={{background: "#F1F8F9"}}>
       <Box sx={{ marginTop: "120px", justifyContent: "center" }}>   
         <Forms />
       </Box>

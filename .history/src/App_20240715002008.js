@@ -4,9 +4,9 @@ import FormPages from "./pages/formPages";
 
 const App = () => {
   return (
-    <Box>
+    <div>
       <FormPages />
-    </Box>
+    </div>
   );
 };
 

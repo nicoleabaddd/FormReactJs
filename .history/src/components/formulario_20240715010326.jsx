@@ -14,7 +14,6 @@ import {
     InputLabel,
     FormControl
   } from "@mui/material";
-import { green } from "@mui/material/colors";
   
   const cities = [
     { name: "Quito", value: "Quito" },
@@ -49,11 +48,11 @@ import { green } from "@mui/material/colors";
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log(formData);
-      setOpen(true); 
+      setOpen(true);  // Abre el diálogo cuando el formulario se envía
     };
   
     const handleClose = () => {
-      setOpen(false);
+      setOpen(false);  // Cierra el diálogo
     };
   
     return (
@@ -69,12 +68,15 @@ import { green } from "@mui/material/colors";
           margin: "auto",
           padding: 2,
           boxShadow: 3,
-          borderRadius: 2,
-          background: "#F1F8F9"
+          borderRadius: 2
         }}
       >
         <Typography variant="h5" component="h1" gutterBottom>
-          ¡Agende su cita médica!
+          ¡Bienvenido a la agenda 
+        </Typography>
+
+        <Typography variant="h5" component="h1" gutterBottom>
+          de citas médicas!
         </Typography>
 
         <TextField

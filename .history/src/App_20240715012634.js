@@ -4,7 +4,7 @@ import FormPages from "./pages/formPages";
 
 const App = () => {
   return (
-    <Box>
+    <Box sx= {{background: "#F9F3EE"}}>
       <FormPages />
     </Box>
   );

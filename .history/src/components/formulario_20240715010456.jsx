@@ -14,7 +14,6 @@ import {
     InputLabel,
     FormControl
   } from "@mui/material";
-import { green } from "@mui/material/colors";
   
   const cities = [
     { name: "Quito", value: "Quito" },
@@ -69,8 +68,7 @@ import { green } from "@mui/material/colors";
           margin: "auto",
           padding: 2,
           boxShadow: 3,
-          borderRadius: 2,
-          background: "#F1F8F9"
+          borderRadius: 2
         }}
       >
         <Typography variant="h5" component="h1" gutterBottom>

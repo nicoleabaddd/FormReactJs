@@ -70,7 +70,7 @@ import { green } from "@mui/material/colors";
           padding: 2,
           boxShadow: 3,
           borderRadius: 2,
-          background: "#F1F8F9"
+          background: "green",
         }}
       >
         <Typography variant="h5" component="h1" gutterBottom>

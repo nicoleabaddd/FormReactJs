@@ -1,40 +1,12 @@
 import React, { useState } from "react";
-import {
-    TextField,
-    Button,
-    Box,
-    Typography,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    MenuItem,
-    Select,
-    InputLabel,
-    FormControl
-  } from "@mui/material";
-import { green } from "@mui/material/colors";
-  
-  const cities = [
-    { name: "Quito", value: "Quito" },
-    { name: "Guayaquil", value: "Guayaquil" },
-    { name: "Cuenca", value: "Cuenca" },
-    { name: "Santo Domingo", value: "Santo Domingo" },
-    { name: "Machala", value: "Machala" },
-    { name: "Durán", value: "Durán" },
-    { name: "Manta", value: "Manta" },
-    { name: "Portoviejo", value: "Portoviejo" },
-    { name: "Ambato", value: "Ambato" },
-    { name: "Riobamba", value: "Riobamba" }
-  ];
-  
-  const Forms = () => {
+import { TextField, Button, Box, Typography, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@mui/material";
+
+
+const Forms = () => {
     const [formData, setFormData] = useState({
       name: "",
       email: "",
-      password: "",
-      city: ""
+      password: ""
     });
     const [open, setOpen] = useState(false);
   
@@ -49,11 +21,11 @@ import { green } from "@mui/material/colors";
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log(formData);
-      setOpen(true); 
+      setOpen(true);  // Abre el diálogo cuando el formulario se envía
     };
   
     const handleClose = () => {
-      setOpen(false);
+      setOpen(false);  // Cierra el diálogo
     };
   
     return (
@@ -69,14 +41,12 @@ import { green } from "@mui/material/colors";
           margin: "auto",
           padding: 2,
           boxShadow: 3,
-          borderRadius: 2,
-          background: "#F1F8F9"
+          borderRadius: 2
         }}
       >
         <Typography variant="h5" component="h1" gutterBottom>
-          ¡Agende su cita médica!
+          My Material Form
         </Typography>
-
         <TextField
           label="Name"
           name="name"
@@ -103,33 +73,18 @@ import { green } from "@mui/material/colors";
           required
           type="password"
         />
-        <FormControl fullWidth>
-          <InputLabel id="city-label">City</InputLabel>
-          <Select
-            labelId="city-label"
-            name="city"
-            value={formData.city}
-            onChange={handleChange}
-            label="City"
-            fullWidth
-            required
-          >
-            {cities.map((city, index) => (
-              <MenuItem key={index} value={city.value}>
-                {city.name}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
         <Button variant="contained" color="primary" type="submit">
           Submit
         </Button>
   
-        <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>{"Cita agendada"}</DialogTitle>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+        >
+          <DialogTitle>{"Submission Successful"}</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              ¡Tu cita ha sido agendada exitosamente!
+              Your form has been submitted successfully!
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -141,5 +96,6 @@ import { green } from "@mui/material/colors";
       </Box>
     );
   };
+  
 
 export default Forms;
